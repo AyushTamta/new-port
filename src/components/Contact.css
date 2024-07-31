@@ -1,0 +1,75 @@
+.contact {
+    padding: 40px;
+    background: linear-gradient(to right, #f9f9f9, #ebedee); /* Example gradient background */
+    border-radius: 10px; /* Add rounded corners for a softer look */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add a soft shadow */
+}
+
+.contact-container {
+    margin-left: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    padding-top: 130px;
+    padding-bottom: 130px;
+    color: yellow;
+
+}
+
+.contact-info {
+    
+    flex: 1;
+}
+
+.contact-info h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Example font family */
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease; /* Example hover effect */
+}
+
+.contact-item:hover {
+    transform: translateX(5px); /* Example translation effect on hover */
+}
+
+.contact-icon {
+    
+    margin-right: 10px;
+    font-size: 20px;
+    color: grey;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.profile-picture {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-left: -20px;
+}
+
+.profile-image {
+    max-width: 100%;
+    height: auto;
+     /* Make the profile image circular */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Add a softer shadow */
+    transition: transform 0.3s ease; /* Example hover effect */
+    transform: rotate(270deg); /* Rotate the image by 90 degrees */
+}
+ß
+
+.profile-image:hover {
+    transform: scale(1.05); /* Example scale effect on hover */
+}
