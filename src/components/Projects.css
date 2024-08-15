@@ -1,47 +1,85 @@
 .projects {
-    padding: 100px;
-    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  justify-content: center;
+    background-image: url('./project_bg.png'); /* Add the background image */
+    background-size: cover; /* Make sure the image covers the entire section */
+    background-position: center; 
+    
     color: #ecf0f1;
+    overflow: hidden;
+    position: relative; /* Ensure the project container is positioned */
 }
 
 .projects h2 {
+    
     text-align: center;
-    margin-bottom: 60px;
-    height: 100px;
+    margin-bottom: 40px;
+
+    justify-content: center;
+    background-image: url('./project_bg.png'); /* Add the background image */
+    background-size: cover; /* Make sure the image covers the entire section */
+    background-position: center; 
 }
 
 .projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
+    position: relative;
+    width: 100%;
+    height: 1900vh; /* Adjust the height as needed */
+    display: flex;
+    
+    justify-content: center;
+    background-image: url('./project_bg.png'); /* Add the background image */
+    background-size: cover; /* Make sure the image covers the entire section */
+    background-position: center; /* Center the background image */
+
 }
 
 .project-tile {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 250px; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height as needed */
+    border-radius: 0px;
     transition: transform 0.3s, box-shadow 0.3s;
-    height: 300px;
-    margin-bottom: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    left: 0%;
+   
+    animation: mymove 10s infinite;
+    bottom: 0%;
+
+    
 }
 
-.project-tile:hover,
 .project-tile.hovered {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    margin-left: 40px;
+margin-top: 170px;
+    transform: translate(-50%, -50%) scale(2); /* Center and enlarge the tile */
+    animation-duration: 99s;
 }
 
 .project-image {
-    width: 100%;
+    width: 200%;
     height: auto;
-    display: block;
+    align-items: center;
+    margin-top: -150px;
+    margin-left: 80px;
     transition: transform 0.3s;
+    color: #1a1a1a;
 }
 
-.project-tile:hover .project-image,
 .project-tile.hovered .project-image {
     transform: scale(1.1);
+    align-items: center;
 }
 
 .project-details {
@@ -49,7 +87,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 20px;
+    padding: 10px;
     background-color: rgba(0, 0, 0, 0.7);
     transition: opacity 0.3s;
     opacity: 0;
@@ -80,3 +118,11 @@
     color: #ff9f00;
     border-bottom-color: #ff9f00;
 }
+
+@keyframes mymove {
+    0%   {top: 0px;}
+    25%  {top: 200px;}
+    75%  {top: 50px}
+    100% {top: 100px;}
+  }
+
